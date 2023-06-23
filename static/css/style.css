@@ -1,12 +1,12 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Oswald&display=swap');
-html, body {
+
+html,
+body {
   height: 100%;
-  /* overflow: hidden;  */
   padding: 0;
- 
+
 }
 
 .general {
@@ -15,10 +15,10 @@ html, body {
   display: grid;
   grid-template-rows: 1fr 2fr 1fr;
   grid-template-areas: "header"
-                       "contenido"
-                       "footer";
-justify-content: center;
-animation: aniheader 1s;
+    "contenido"
+    "footer";
+  justify-content: center;
+  animation: aniheader 1s;
 
 }
 
@@ -29,25 +29,26 @@ animation: aniheader 1s;
   background: rgb(158, 206, 153);
   border-radius: 30px;
   box-shadow: 0px 0px 30px rgb(158, 206, 153);
-  
+
 }
+
 .title {
   font-family: 'Architects Daughter', cursive;
   font-size: 50px;
   font-weight: bold;
-  color:rgb(58, 253, 243);
+  color: rgb(58, 253, 243);
   text-align: center;
   text-transform: uppercase;
   margin-left: 20%;
   margin-right: 20%;
   padding: 20px;
-  background: linear-gradient(45deg,rgba(77, 77, 77, 0.285), rgba(77, 77, 77, 0.351));
+  background: linear-gradient(45deg, rgba(77, 77, 77, 0.285), rgba(77, 77, 77, 0.351));
   border-radius: 20px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   transform: skew(-15deg);
   transition: background-color 0.3s ease-in-out;
   animation: anititle 0.5s;
-  
+
 }
 
 .title:hover {
@@ -78,42 +79,49 @@ animation: aniheader 1s;
   justify-items: center;
   align-items: center;
   align-content: center;
-  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr;
   height: 70%;
 }
 
-img{
+img {
   border-radius: 50px;
 }
-.texto{
+
+.texto {
   height: 50%;
 }
-.imgs{
+
+.imgs {
   grid-area: imagen;
   height: 70%;
   margin-top: -15%;
   margin-bottom: -15%;
-  animation:  aniimg 2.5s;
+  animation: aniimg 2.5s;
 }
-.title2{
+
+.title2 {
   padding-right: 20px;
   margin-top: -10%;
   color: white;
   font-family: 'Indie Flower', cursive;
   font-size: 35px;
-  animation:  anittl 1.2s;
+  animation: anittl 1.2s;
   margin-left: 10%;
 }
-.txt{
+
+.txt {
   grid-area: texto;
   color: white;
   font-family: 'Indie Flower', cursive;
   font-size: 22px;
   margin-right: 10%;
   margin-left: 10%;
-  animation:  anitxt 2s;
+  animation: anitxt 2s;
 }
-.imghub, .imggmail, .imglink{
+
+.imghub,
+.imggmail,
+.imglink {
   height: 100%;
   width: 45%;
   border-radius: 50px;
@@ -125,92 +133,75 @@ img{
   align-items: center;
   cursor: pointer;
 }
-.imghub:hover, .imggmail:hover, .imglink:hover{
-  transform: scale(1.2); /* Escala el icono al hacer hover */
-  background: linear-gradient(135deg, #3498db, #e74c3c); /* Gradiente lineal */
-  background-size: 200% 200%; /* Tamaño inicial del fondo */
-  animation: gradientAnimation 1s ease infinite; /* Animación con duración de 5 segundos */
 
-  transition: transform 0.3s, color 0.3s; /* Transiciones suaves de escala y color */
+.imghub:hover,
+.imggmail:hover,
+.imglink:hover {
+  transform: scale(1.2);
+  background: linear-gradient(135deg, #3498db, #e74c3c);
+  background-size: 200% 200%;
+  animation: gradientAnimation 1s ease infinite;
+  transition: transform 0.3s, color 0.3s;
 }
+
 .icongit {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-weight: bold;
   font-size: 26px;
-  color: #24292e; /* Color de texto de GitHub */
+  color: #24292e;
   letter-spacing: -0.5px;
 }
+
 .icongmail {
   margin-right: -20%;
   font-family: 'Roboto', sans-serif;
   font-size: 26px;
-  color: #24292e; /* Color de texto de GitHub */
+  color: #24292e;
 }
 
 .iconlink {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-weight: bold;
   font-size: 26px;
-  color: #24292e; /* Color de texto de GitHub */
+  color: #24292e;
   letter-spacing: -0.5px;
 }
 
-.imggmail img{
+.imggmail img {
   margin-left: -20%;
 }
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%; /* Posición inicial del fondo */
-  }
-  50% {
-    background-position: 100% 50%; /* Posición intermedia del fondo */
-  }
-  100% {
-    background-position: 0% 50%; /* Posición final del fondo */
-  }
-}
-
 
 @media screen and (max-width: 1450px) {
-.container {
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: "imagen ""texto";
-  height: 100%;
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "imagen " "texto";
+    height: 100%;
   }
 
 }
-@media screen and (min-width: 1450px) {
-    html, body{
-      overflow: hidden; 
-    }
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
   }
-  
 
+  50% {
+    background-position: 100% 50%;
+  }
 
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
+@media screen and (min-width: 1450px) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  html,
+  body {
+    overflow: hidden;
+  }
+}
 
 @keyframes aniheader {
   0% {
@@ -218,7 +209,7 @@ img{
     height: 0%;
     width: 0%;
   }
-  
+
   100% {
     opacity: 1;
     height: 100%;
@@ -229,53 +220,64 @@ img{
 @keyframes anititle {
   0% {
     opacity: 0;
-  font-size: 0px;
+    font-size: 0px;
   }
-  50%{
+
+  50% {
     opacity: 0;
     font-size: 0px;
   }
+
   100% {
     opacity: 1;
   }
 }
+
 @keyframes aniimg {
   0% {
     opacity: 0;
     height: 0%;
   }
-90% {
+
+  90% {
     opacity: 0;
     height: 0%;
   }
+
   100% {
     opacity: 1;
     height: 70%;
   }
 }
+
 @keyframes anitxt {
   0% {
     opacity: 0;
     font-size: 0px;
   }
-  50%{
+
+  50% {
     opacity: 0;
     font-size: 0px;
   }
+
   100% {
     opacity: 1;
     font-size: 22px;
   }
 }
+
 @keyframes anittl {
   0% {
     opacity: 0;
     font-size: 0px;
   }
+
   50% {
     opacity: 0;
     font-size: 0px;
   }
+
   100% {
     opacity: 1;
     font-size: 35px;
@@ -287,10 +289,12 @@ img{
     opacity: 0;
     height: 0%;
   }
-90% {
+
+  90% {
     opacity: 0;
     height: 0%;
   }
+
   100% {
     opacity: 1;
   }
