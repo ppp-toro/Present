@@ -1,0 +1,297 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Oswald&display=swap');
+html, body {
+  height: 100%;
+  /* overflow: hidden;  */
+  padding: 0;
+ 
+}
+
+.general {
+  height: 100%;
+  margin-top: 15px;
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-areas: "header"
+                       "contenido"
+                       "footer";
+justify-content: center;
+animation: aniheader 1s;
+
+}
+
+.header {
+  height: 100%;
+  width: 100%;
+  grid-area: header;
+  background: rgb(158, 206, 153);
+  border-radius: 30px;
+  box-shadow: 0px 0px 30px rgb(158, 206, 153);
+  
+}
+.title {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 50px;
+  font-weight: bold;
+  color:rgb(58, 253, 243);
+  text-align: center;
+  text-transform: uppercase;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding: 20px;
+  background: linear-gradient(45deg,rgba(77, 77, 77, 0.285), rgba(77, 77, 77, 0.351));
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transform: skew(-15deg);
+  transition: background-color 0.3s ease-in-out;
+  animation: anititle 0.5s;
+  
+}
+
+.title:hover {
+  background-color: #8f8c8cb7;
+}
+
+.container {
+  grid-area: contenido;
+  background: rgb(77, 77, 77);
+  border-radius: 30px;
+  box-shadow: 0px 0px 30px rgb(77, 77, 77);
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "texto imagen";
+}
+
+.footer {
+  height: 15%;
+  grid-area: footer;
+  background: rgb(93, 182, 177);
+  border-radius: 30px;
+  box-shadow: 0px 0px 30px rgb(93, 182, 177);
+  animation: anifoot 1s;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  grid-template-columns: 1fr 1fr 1fr ;
+  height: 70%;
+}
+
+img{
+  border-radius: 50px;
+}
+.texto{
+  height: 50%;
+}
+.imgs{
+  grid-area: imagen;
+  height: 70%;
+  margin-top: -15%;
+  margin-bottom: -15%;
+  animation:  aniimg 2.5s;
+}
+.title2{
+  padding-right: 20px;
+  margin-top: -10%;
+  color: white;
+  font-family: 'Indie Flower', cursive;
+  font-size: 35px;
+  animation:  anittl 1.2s;
+  margin-left: 10%;
+}
+.txt{
+  grid-area: texto;
+  color: white;
+  font-family: 'Indie Flower', cursive;
+  font-size: 22px;
+  margin-right: 10%;
+  margin-left: 10%;
+  animation:  anitxt 2s;
+}
+.imghub, .imggmail, .imglink{
+  height: 100%;
+  width: 45%;
+  border-radius: 50px;
+  background: white;
+  animation: aniicons 1s;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.imghub:hover, .imggmail:hover, .imglink:hover{
+  transform: scale(1.2); /* Escala el icono al hacer hover */
+  background: linear-gradient(135deg, #3498db, #e74c3c); /* Gradiente lineal */
+  background-size: 200% 200%; /* Tamaño inicial del fondo */
+  animation: gradientAnimation 1s ease infinite; /* Animación con duración de 5 segundos */
+
+  transition: transform 0.3s, color 0.3s; /* Transiciones suaves de escala y color */
+}
+.icongit {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+  color: #24292e; /* Color de texto de GitHub */
+  letter-spacing: -0.5px;
+}
+.icongmail {
+  margin-right: -20%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 26px;
+  color: #24292e; /* Color de texto de GitHub */
+}
+
+.iconlink {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+  color: #24292e; /* Color de texto de GitHub */
+  letter-spacing: -0.5px;
+}
+
+.imggmail img{
+  margin-left: -20%;
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%; /* Posición inicial del fondo */
+  }
+  50% {
+    background-position: 100% 50%; /* Posición intermedia del fondo */
+  }
+  100% {
+    background-position: 0% 50%; /* Posición final del fondo */
+  }
+}
+
+
+@media screen and (max-width: 1450px) {
+.container {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "imagen ""texto";
+  height: 100%;
+  }
+
+}
+@media screen and (min-width: 1450px) {
+    html, body{
+      overflow: hidden; 
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes aniheader {
+  0% {
+    opacity: 0;
+    height: 0%;
+    width: 0%;
+  }
+  
+  100% {
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@keyframes anititle {
+  0% {
+    opacity: 0;
+  font-size: 0px;
+  }
+  50%{
+    opacity: 0;
+    font-size: 0px;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes aniimg {
+  0% {
+    opacity: 0;
+    height: 0%;
+  }
+90% {
+    opacity: 0;
+    height: 0%;
+  }
+  100% {
+    opacity: 1;
+    height: 70%;
+  }
+}
+@keyframes anitxt {
+  0% {
+    opacity: 0;
+    font-size: 0px;
+  }
+  50%{
+    opacity: 0;
+    font-size: 0px;
+  }
+  100% {
+    opacity: 1;
+    font-size: 22px;
+  }
+}
+@keyframes anittl {
+  0% {
+    opacity: 0;
+    font-size: 0px;
+  }
+  50% {
+    opacity: 0;
+    font-size: 0px;
+  }
+  100% {
+    opacity: 1;
+    font-size: 35px;
+  }
+}
+
+@keyframes aniicons {
+  0% {
+    opacity: 0;
+    height: 0%;
+  }
+90% {
+    opacity: 0;
+    height: 0%;
+  }
+  100% {
+    opacity: 1;
+  }
+}
