@@ -13,23 +13,29 @@ const elements = [
   function openURL(url) {
     window.open(url, '_blank');
   }
-
-
+var Asunto = document.querySelector('#Asunto')
+var Contenido = document.querySelector('#Contenido')
+var Contform = document.querySelector('.contform')
   document.querySelector('.imggmail').addEventListener("click", function(){
-    document.querySelector('#Asunto').value = ""
-    document.querySelector('#Contenido').value = ""
+    Asunto.value = ""
+    Contenido.value = ""
+    Contform.style.opacity = 1
     document.documentElement.scrollTop += 500;
     document.body.scrollTop += 1100;
   })
   document.querySelector('.Cancelar').addEventListener("click", function(){
     document.body.scrollTop -= 1100;
   })
+  if (Asunto.value.lenght > 3 && Contenido.value.lenght > 3){
+   
   document.querySelector('.Enviar').addEventListener("click", function(){
     remitente = document.querySelector('#Remitente').value
     asunto = document.querySelector('#Asunto').value
     contenido = document.querySelector('#Contenido').value
     enviarCorreo(remitente, asunto, contenido) 
   })
+   
+}
 
   function enviarCorreo(remitente, asunto, contenido) {
     const datosCorreo = {

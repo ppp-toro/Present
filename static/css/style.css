@@ -185,6 +185,7 @@ img {
   background: #ffffffaf;
   border: solid 1px black;
   box-shadow: 0 0 3px 7px rgba(0, 0, 0, 0.299);
+  opacity: 0;
 }
 .row {
   margin-bottom: 2%;

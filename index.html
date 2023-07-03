@@ -45,20 +45,22 @@
 
     <div class="form">
         <div class="contform">
-            <div class="row">
-                <input type="text" name="Asunto" id="Remitente" placeholder="  Remitente">
-                <label class="labelgmail">    Envía tu correo electónico</label>
-            </div>
-            <div class="row">
-                <input type="text" name="Asunto" id="Asunto" placeholder="  Asunto">
-            </div>
-            <div class="row">
-                <textarea name="Contenido" id="Contenido" cols="30" rows="10" placeholder=" Escribe aquí el contenido de tu cuestión..."></textarea>
-            </div>
-            <div class="row">
-                <button type="submit" class="Enviar">Enviar Gmail</button>
-                <button class="Cancelar">Cancelar</button>
-            </div>           
+            <form action="">
+                <div class="row">
+                    <input type="text" name="Asunto" id="Remitente" placeholder="  Remitente" required>
+                    <label class="labelgmail">    Envía tu correo electónico</label>
+                </div>
+                <div class="row">
+                    <input type="text" name="Asunto" id="Asunto" placeholder="  Asunto" required>
+                </div>
+                <div class="row">
+                    <textarea name="Contenido" id="Contenido" cols="30" rows="10" required placeholder=" Escribe aquí el contenido de tu cuestión..."></textarea>
+                </div>
+                <div class="row">
+                    <button type="submit" class="Enviar">Enviar Gmail</button>
+                    <button class="Cancelar">Cancelar</button>
+                </div>   
+            </form>        
         </div>
       </div>
       
