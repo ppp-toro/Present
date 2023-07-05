@@ -2,383 +2,105 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Oswald&display=swap');
 
-html,
-body {
-  height: 100%;
-  padding: 0;
-
-}
-
-.general {
-  height: 100%;
-  margin-top: 15px;
+.general{
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-top: 2%;
+  display: block;
   display: grid;
-  grid-template-rows: 1fr 2fr 1fr;
-  grid-template-areas: "header"
-    "contenido"
-    "footer";
-  justify-content: center;
-  animation: aniheader 1s;
-
+  grid-template-rows: 15vh 60vh 15vh;
+  grid-row-gap: 1%;
 }
 
-.header {
-  height: 100%;
-  width: 100%;
-  grid-area: header;
-  background: rgb(158, 206, 153);
-  border-radius: 30px;
-  box-shadow: 0px 0px 30px rgb(158, 206, 153);
-
+.header{
+background:  rgb(158, 206, 153);
+border-radius: 20px;
+text-align: center;
+box-shadow: 0 2px 20px rgb(158, 206, 153);
 }
-
-.title {
-  font-family: 'Architects Daughter', cursive;
-  font-size: 50px;
-  font-weight: bold;
-  color: rgb(58, 253, 243);
-  text-align: center;
-  text-transform: uppercase;
-  margin-left: 20%;
-  margin-right: 20%;
-  padding: 20px;
-  background: linear-gradient(45deg, rgba(77, 77, 77, 0.285), rgba(77, 77, 77, 0.351));
-  border-radius: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  transform: skew(-15deg);
-  transition: background-color 0.3s ease-in-out;
-  animation: anititle 0.5s;
-
-}
-
-.title:hover {
-  background-color: #8f8c8cb7;
-}
-
-.container {
-  grid-area: contenido;
+.contenedor{
+  display: grid;
+  grid-template-columns: 40% 60% ;
   background: rgb(77, 77, 77);
-  border-radius: 30px;
-  box-shadow: 0px 0px 30px rgb(77, 77, 77);
-  display: grid;
-  justify-items: center;
+  border-radius: 20px;
   align-items: center;
-  align-content: center;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "texto imagen";
-}
-
-.footer {
-  height: 15%;
-  grid-area: footer;
-  background: rgb(93, 182, 177);
-  border-radius: 30px;
-  box-shadow: 0px 0px 30px rgb(93, 182, 177);
-  animation: anifoot 1s;
-  display: grid;
   justify-items: center;
-  align-items: center;
-  align-content: center;
-  grid-template-columns: 1fr 1fr 1fr;
-  height: 70%;
+  box-shadow: 0px 2px 20px rgb(77, 77, 77);
 }
-
-img {
-  border-radius: 50px;
+.footer{
+  display: flex;
+  justify-content: center;
+ display: grid;
+ grid-template-columns: repeat(3, 20%);
+ align-items: center;
+ justify-items: center;
+ border-radius: 20px;
+ background: rgb(93, 182, 177);
+ box-shadow: 0px 2px 20px rgb(93, 182, 177);
 }
-
-.texto {
+.form{
+  display: none;
+}
+.imgprofile{
+  margin-top: -20%;
   height: 50%;
+  border-radius: 20%;
 }
-
-.imgs {
-  grid-area: imagen;
-  height: 70%;
-  margin-top: -15%;
-  margin-bottom: -15%;
-  animation: aniimg 2.5s;
-}
-
-.title2 {
-  padding-right: 20px;
+.title2{
   margin-top: -10%;
   color: white;
+  font-size: 40px;
   font-family: 'Indie Flower', cursive;
-  font-size: 35px;
-  animation: anittl 1.2s;
-  margin-left: 10%;
+  font-weight: bold;
 }
-
-.txt {
-  grid-area: texto;
+.txt{
+  font-size: 24px;
+  margin-right: 20%;
   color: white;
   font-family: 'Indie Flower', cursive;
-  font-size: 22px;
-  margin-right: 10%;
-  margin-left: 10%;
-  animation: anitxt 2s;
 }
-
-.imghub,
-.imggmail,
-.imglink {
-  height: 100%;
-  width: 45%;
-  border-radius: 50px;
-  background: white;
-  animation: aniicons 1s;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.imghub:hover,
-.imggmail:hover,
-.imglink:hover {
-  transform: scale(1.2);
-  background: linear-gradient(135deg, #3498db, #e74c3c);
-  background-size: 200% 200%;
-  animation: gradientAnimation 1s ease infinite;
-  transition: transform 0.3s, color 0.3s;
-}
-
-.icongit {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-weight: bold;
-  font-size: 26px;
-  color: #24292e;
-  letter-spacing: -0.5px;
-}
-
-.icongmail {
-  margin-right: -20%;
-  font-family: 'Roboto', sans-serif;
-  font-size: 26px;
-  color: #24292e;
-}
-
-.iconlink {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-weight: bold;
-  font-size: 26px;
-  color: #24292e;
-  letter-spacing: -0.5px;
-}
-
-.imggmail img {
-  margin-left: -20%;
-}
-.form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 1000px;
-  width: 100%;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(83, 70, 227),rgba(255, 255, 255, 0));
-}
-.contform{
-  padding: 3%;
-  border-radius: 40px;
-  background: #ffffffaf;
-  border: solid 1px black;
-  box-shadow: 0 0 3px 7px rgba(0, 0, 0, 0.299);
-  opacity: 0;
-}
-.row {
-  margin-bottom: 2%;
-}
-#Remitente {
-  height: 30px;
-  width: 400px;
-  opacity: 0.8;
-  border-radius: 10px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-#Asunto {
-  height: 30px;
-  width: 400px;
-  opacity: 0.8;
-  border-radius: 10px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-.labelgmail{
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
-}
-#Contenido {
-  opacity: 0.8;
-  height: 300px;
-  width: 600px;
-  border-radius: 10px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-
-.Enviar,
-.Cancelar {
-  padding: 10px 20px;
-  margin-right: 10px;
-  background-color: #5754fb;
-  border: none;
+.tittle2{
   color: white;
-  cursor: pointer;
-  border-radius: 50px;
-  font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif;
+}
+.tittle{
+  margin-top: 2%;
+  color: aqua;
+  background: linear-gradient(45deg, rgba(197, 230, 186, 0.563), rgba(87, 194, 202, 0.615));
+  margin-left: 32%;
+  margin-right: 32%;
+  border-radius: 20px;
+  font-family: 'Architects Daughter', cursive;
+  font-weight: bold;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  animation: moveBackground 5s linear infinite;
 }
 
-.Enviar:hover,
-.Cancelar:hover {
-  background-color: #808080;
-  transform: scale(1.2);
-  background: linear-gradient(135deg, #3498db, #e74c3c);
-  background-size: 200% 200%;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 1450px) {
-  html,
-  body {
-    overflow: hidden
+@keyframes moveBackground {
+  0% {
+    transform: translateX(0);
   }
-  .container {
+  40% {
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  90% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@media screen and (max-width: 1450px) {
+
+  .contenedor {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: "imagen " "texto";
-    height: 100%;
   }
+  .general{
 
-}
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@media screen and (min-width: 1450px) {
-
-  html,
-  body {
-    overflow: hidden
-  }
-}
-
-@keyframes aniheader {
-  0% {
-    opacity: 0;
-    height: 0%;
-    width: 0%;
-  }
-
-  100% {
-    opacity: 1;
-    height: 100%;
-    width: 100%;
-  }
-}
-
-@keyframes anititle {
-  0% {
-    opacity: 0;
-    font-size: 0px;
-  }
-
-  50% {
-    opacity: 0;
-    font-size: 0px;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes aniimg {
-  0% {
-    opacity: 0;
-    height: 0%;
-  }
-
-  90% {
-    opacity: 0;
-    height: 0%;
-  }
-
-  100% {
-    opacity: 1;
-    height: 70%;
-  }
-}
-
-@keyframes anitxt {
-  0% {
-    opacity: 0;
-    font-size: 0px;
-  }
-
-  50% {
-    opacity: 0;
-    font-size: 0px;
-  }
-
-  100% {
-    opacity: 1;
-    font-size: 22px;
-  }
-}
-
-@keyframes anittl {
-  0% {
-    opacity: 0;
-    font-size: 0px;
-  }
-
-  50% {
-    opacity: 0;
-    font-size: 0px;
-  }
-
-  100% {
-    opacity: 1;
-    font-size: 35px;
-  }
-}
-
-@keyframes aniicons {
-  0% {
-    opacity: 0;
-    height: 0%;
-  }
-
-  90% {
-    opacity: 0;
-    height: 0%;
-  }
-
-  100% {
-    opacity: 1;
+    grid-template-rows: 15vh 120vh 15vh;
+  
   }
 }
