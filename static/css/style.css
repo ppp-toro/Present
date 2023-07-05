@@ -38,9 +38,7 @@ box-shadow: 0 2px 20px rgb(158, 206, 153);
  background: rgb(93, 182, 177);
  box-shadow: 0px 2px 20px rgb(93, 182, 177);
 }
-.form{
-  display: none;
-}
+
 .imgprofile{
   margin-top: -20%;
   height: 50%;
