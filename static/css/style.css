@@ -1,78 +1,116 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Indie+Flower&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Oswald&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
 
-.general{
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  background: linear-gradient(to right, #3498db, #2ecc71);
+  background-size: 200% 200%;
+  animation: gradient 10s ease infinite;
+}
+.entrada {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.tituloHome {
+  font-size: 15vw;
+  text-align: center;
+  font-family: "Nanum Pen Script", cursive;
+  color: white;
+}
+.Author {
+  font-size: 8vw;
+  color: white;
+}
+.general {
+  opacity: 0;
   margin-left: 4%;
   margin-right: 4%;
   margin-top: 2%;
-  display: block;
   display: grid;
   grid-template-rows: 15vh 60vh 15vh;
   grid-row-gap: 1%;
+  transition: 2s;
 }
 
-.header{
-background:  rgb(158, 206, 153);
-border-radius: 20px;
-text-align: center;
-box-shadow: 0 2px 20px rgb(158, 206, 153);
+.header {
+  background: rgb(158, 206, 153);
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 2px 20px rgb(158, 206, 153);
 }
-.contenedor{
+.contenedor {
   display: grid;
-  grid-template-columns: 40% 60% ;
+  grid-template-columns: 40% 60%;
   background: rgb(77, 77, 77);
   border-radius: 20px;
   align-items: center;
   justify-items: center;
   box-shadow: 0px 2px 20px rgb(77, 77, 77);
 }
-.footer{
+.footer {
   display: flex;
   justify-content: center;
- display: grid;
- grid-template-columns: repeat(3, 20%);
- align-items: center;
- justify-items: center;
- border-radius: 20px;
- background: rgb(93, 182, 177);
- box-shadow: 0px 2px 20px rgb(93, 182, 177);
+  display: grid;
+  grid-template-columns: repeat(3, 20%);
+  align-items: center;
+  justify-items: center;
+  border-radius: 20px;
+  background: rgb(93, 182, 177);
+  box-shadow: 0px 2px 20px rgb(93, 182, 177);
 }
 
-.imgprofile{
+.imgprofile {
   margin-top: -20%;
   height: 50%;
   border-radius: 20%;
 }
-.title2{
+.title2 {
   margin-top: -10%;
   color: white;
   font-size: 40px;
-  font-family: 'Indie Flower', cursive;
+  font-family: "Indie Flower", cursive;
   font-weight: bold;
+
+  text-align: center;
 }
-.txt{
+.txt {
   font-size: 24px;
-  margin-right: 20%;
+  margin-left: 3%;
+  margin-right: 3%;
   color: white;
-  font-family: 'Indie Flower', cursive;
+  font-family: "Indie Flower", cursive;
 }
-.tittle2{
+.tittle2 {
   color: white;
 }
-.tittle{
+.tittle {
   margin-top: 2%;
   color: aqua;
-  background: linear-gradient(45deg, rgba(197, 230, 186, 0.563), rgba(87, 194, 202, 0.615));
+  background: linear-gradient(
+    45deg,
+    rgba(197, 230, 186, 0.563),
+    rgba(87, 194, 202, 0.615)
+  );
   margin-left: 32%;
   margin-right: 32%;
   border-radius: 20px;
-  font-family: 'Architects Daughter', cursive;
+  font-family: "Architects Daughter", cursive;
   font-weight: bold;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
   animation: moveBackground 5s linear infinite;
 }
-
+img:hover {
+  transition: 1.4s;
+  transform: scale(120%);
+}
 @keyframes moveBackground {
   0% {
     transform: translateX(0);
@@ -91,14 +129,15 @@ box-shadow: 0 2px 20px rgb(158, 206, 153);
   }
 }
 @media screen and (max-width: 1450px) {
-
   .contenedor {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 40% 1fr;
   }
-  .general{
-
-    grid-template-rows: 15vh 120vh 15vh;
-  
+  .general {
+    grid-template-rows: 20vh 150vh 15vh;
+  }
+  body,
+  html {
+    overflow: auto;
   }
 }
